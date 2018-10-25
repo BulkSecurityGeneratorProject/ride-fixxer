@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.ridefixxer.app",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.5.0",
+    "applicationType": "monolith",
+    "baseName": "rideFixxer",
+    "packageName": "com.ridefixxer.app",
+    "packageFolder": "com/ridefixxer/app",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "MTY0YmUwNmZiYzM4MGFhNWEyMTk4MGYxZTc0ZGJmMGY3NzM0MDNkOTcxNzI3NzE3ZDg0ZjA3NDhhNGNjOWNlZWJkZWEyZWUyNTBjMzc4ODVmNDJlODk5ZDc2OTkxZjYxYWFiMzc1YWU3NzMwYjMwNTVkYzVlYjVlMWY2OWI1MzE=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "fr"
+    ]
+  }
+}
