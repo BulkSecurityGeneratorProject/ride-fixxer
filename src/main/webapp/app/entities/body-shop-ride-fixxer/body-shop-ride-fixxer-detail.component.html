@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="bodyShop">
+            <h2><span jhiTranslate="rideFixxerApp.bodyShop.detail.title">Body Shop</span> {{bodyShop.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="rideFixxerApp.bodyShop.owner">Owner</span></dt>
+                <dd>
+                    <span>{{bodyShop.owner}}</span>
+                </dd>
+                <dt><span jhiTranslate="rideFixxerApp.bodyShop.name">Name</span></dt>
+                <dd>
+                    <span>{{bodyShop.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="rideFixxerApp.bodyShop.phone">Phone</span></dt>
+                <dd>
+                    <span>{{bodyShop.phone}}</span>
+                </dd>
+                <dt><span jhiTranslate="rideFixxerApp.bodyShop.email">Email</span></dt>
+                <dd>
+                    <span>{{bodyShop.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="rideFixxerApp.bodyShop.location">Location</span></dt>
+                <dd>
+                    <div *ngIf="bodyShop.location">
+                        <a [routerLink]="['/location-ride-fixxer', bodyShop.location?.id, 'view']">{{bodyShop.location?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/body-shop-ride-fixxer', bodyShop.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

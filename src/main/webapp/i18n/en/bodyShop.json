@@ -1,0 +1,27 @@
+
+{
+    "rideFixxerApp": {
+        "bodyShop" : {
+            "home": {
+                "title": "Body Shops",
+                "createLabel": "Create a new Body Shop",
+                "createOrEditLabel": "Create or edit a Body Shop"
+            },
+            "created": "A new Body Shop is created with identifier {{ param }}",
+            "updated": "A Body Shop is updated with identifier {{ param }}",
+            "deleted": "A Body Shop is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Body Shop {{ id }}?"
+            },
+            "detail": {
+                "title": "Body Shop"
+            },
+            "owner": "Owner",
+            "name": "Name",
+            "phone": "Phone",
+            "email": "Email",
+            "location": "Location",
+            "service": "Service"
+        }
+    }
+}

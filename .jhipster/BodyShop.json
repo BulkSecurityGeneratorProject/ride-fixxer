@@ -1,0 +1,47 @@
+{
+    "name": "BodyShop",
+    "fields": [
+        {
+            "fieldName": "owner",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "location",
+            "otherEntityName": "location",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "bodyShop"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "service",
+            "otherEntityName": "services",
+            "otherEntityRelationshipName": "bodyShop"
+        }
+    ],
+    "changelogDate": "20181029034748",
+    "entityTableName": "body_shop",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "rideFixxer"
+}

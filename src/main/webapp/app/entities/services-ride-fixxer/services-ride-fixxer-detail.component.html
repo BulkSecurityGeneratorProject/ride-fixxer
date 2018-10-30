@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="services">
+            <h2><span jhiTranslate="rideFixxerApp.services.detail.title">Services</span> {{services.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="rideFixxerApp.services.name">Name</span></dt>
+                <dd>
+                    <span>{{services.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="rideFixxerApp.services.price">Price</span></dt>
+                <dd>
+                    <span>{{services.price}}</span>
+                </dd>
+                <dt><span jhiTranslate="rideFixxerApp.services.timeAprox">Time Aprox</span></dt>
+                <dd>
+                    <span>{{services.timeAprox}}</span>
+                </dd>
+                <dt><span jhiTranslate="rideFixxerApp.services.bodyShop">Body Shop</span></dt>
+                <dd>
+                    <div *ngIf="services.bodyShop">
+                        <a [routerLink]="['/body-shop-ride-fixxer', services.bodyShop?.id, 'view']">{{services.bodyShop?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/services-ride-fixxer', services.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
